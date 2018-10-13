@@ -1,0 +1,8 @@
+AddDefaultCharset UTF-8
+RewriteEngine On
+RewriteBase /
+Options All -Indexes
+DirectoryIndex /page/main.php
+ErrorDocument 404 /error404.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
