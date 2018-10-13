@@ -22,7 +22,6 @@ function generateNick($length=15) {
 $template = ''; // Глобальная переменная
 $account = ''; // Глобальная переменная
 $message = '';
-$pidoras = 123 - 33; // Пример выражения 123 минус 33
 $status_tpl = 0; // Глобальная переменная
 $login = ''; // Глобальная переменная
 $connect_nick = '';
