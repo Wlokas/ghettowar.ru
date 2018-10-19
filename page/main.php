@@ -64,8 +64,8 @@ if(isset($_POST['duelinfo']))
     $stmt = $pdo->prepare("SELECT * FROM `ghettowar_duels` WHERE duel_id = :id");
     $stmt->execute([':id' => $duel_id]);
     $duel_info = $stmt->fetch(PDO::FETCH_ASSOC);
-    $stmt = $pdo->prepare("SELECT `login` FROM `ghettowar_users` INNER JOIN `ghettowar_duels` WHERE `ghettowar_users`.duel_nick = `ghettowar_duels`.nick1 OR `ghettowar_users`.duel_nick = `ghettowar_duels`.nick2 LIMIT 2");
-    $stmt->execute();
+    $stmt = $pdo->prepare("SELECT `login` FROM `ghettowar_users` INNER JOIN `ghettowar_duels` WHERE `ghettowar_duels`.duel_id = :id AND `ghettowar_users`.id = `ghettowar_duels`.user_id1 OR `ghettowar_duels`.duel_id = :id AND `ghettowar_users`.id = `ghettowar_duels`.user_id2 LIMIT 2");
+    $stmt->execute([':id' => $duel_id]);
     $player_login = $stmt->fetchAll(PDO::FETCH_ASSOC);
     switch ($duel_info['win'])
     {
@@ -90,8 +90,8 @@ if(isset($_POST['duelinfo']))
         if($duel_info['win'] >= 3)
         {
             $template_duel = '-----Дуель----<br>' .
-                '1-ый игрок: ' . $player_login[0]['login'] .
-                '<br>2-ой игрок: ' . $player_login[1]['login'] .
+                '1-ый игрок: ' . $player_login[1]['login'] .
+                '<br>2-ой игрок: ' . $player_login[0]['login'] .
                 '<br>Ставка: ' . $duel_info['win_balance'] .
                 '<br>Статус: ' . $status .
                 '<br>Ваш ник для подключение на сервер: <input type="text" disabled value="' . $connect_nick .'">'.
@@ -100,8 +100,8 @@ if(isset($_POST['duelinfo']))
         elseif ($duel_info['win'] <= 2 && $duel_info['win'] != 0)
         {
             $template_duel = '-----Дуель Окончена----<br>' .
-                '1-ый игрок: ' . $player_login[0]['login'] .
-                '<br>2-ой игрок: ' . $player_login[1]['login'] .
+                '1-ый игрок: ' . $player_login[1]['login'] .
+                '<br>2-ой игрок: ' . $player_login[0]['login'] .
                 '<br>Ставка: ' . $duel_info['win_balance'] .
                 '<br>Статус: ' . $status;
         }

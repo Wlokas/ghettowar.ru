@@ -5,7 +5,7 @@
         function show()
         {
             $.ajax({
-                url: "duels_showlist.php",
+                url: "/page/duels_showlist.php",
                 cache: false,
                 success: function(html){
                     $("#duels").html(html);
