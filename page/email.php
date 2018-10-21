@@ -3,6 +3,7 @@ require_once 'config.php';
 require_once 'PHPMailer.php';
 use PHPMailer\PHPMailer\PHPMailer;
 $mail = new PHPMailer(false);
+$mail->CharSet = 'utf-8';
 try {
     $pdo = new pdo('mysql:host='.$config['mysql_host'].';dbname='.$config['mysql_datebase'], $config['mysql_user'], $config['mysql_password']);
 } catch (PDOException $e){

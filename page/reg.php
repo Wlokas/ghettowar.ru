@@ -19,6 +19,7 @@ function generateCode($length=6) {
     return $code;
 }
 $mail = new PHPMailer(false);                              // Passing `true` enables exceptions
+$mail->CharSet = 'utf-8';
 $message = '';
 $vlogin = '';
 $vemail = '';
