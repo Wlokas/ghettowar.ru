@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4ba78fc-efae-472c-b364-b45f20c7dcd0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/page/email.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/email_change.tpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/77bf9ec0-7f48-48ae-89bc-9d1fd671a02d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/77bf9ec0-7f48-48ae-89bc-9d1fd671a02d.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/page/main.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/main.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/template/main.tpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/email_validate.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/template/email_validate.tpl" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,17 +62,19 @@
     <session id="1126410691">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="9" />
+          <entry key="project.closed" value="10" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.19" value="1" />
+          <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.22" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.30" value="1" />
           <entry key="project.open.time.33" value="1" />
           <entry key="project.open.time.330" value="1" />
           <entry key="project.open.time.45" value="1" />
+          <entry key="project.open.time.49" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.63" value="1" />
           <entry key="project.open.time.65" value="1" />
@@ -81,7 +85,7 @@
           <entry key="project.open.time.73" value="1" />
           <entry key="project.open.time.79" value="1" />
           <entry key="project.open.time.90" value="1" />
-          <entry key="project.opened" value="20" />
+          <entry key="project.opened" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -91,19 +95,19 @@
           <entry key="htaccess" value="3" />
           <entry key="html" value="4" />
           <entry key="js" value="1" />
-          <entry key="php" value="23" />
+          <entry key="php" value="28" />
           <entry key="sql" value="1" />
-          <entry key="tpl" value="29" />
+          <entry key="tpl" value="35" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="HTML" value="4" />
           <entry key="JavaScript" value="1" />
-          <entry key="PHP" value="23" />
-          <entry key="PLAIN_TEXT" value="3" />
+          <entry key="PHP" value="28" />
+          <entry key="PLAIN_TEXT" value="6" />
           <entry key="Scratch" value="1" />
-          <entry key="Smarty" value="29" />
+          <entry key="Smarty" value="32" />
           <entry key="htaccess" value="3" />
         </counts>
       </usages-collector>
@@ -111,17 +115,17 @@
         <counts>
           <entry key="htaccess" value="218" />
           <entry key="html" value="112" />
-          <entry key="php" value="16144" />
-          <entry key="tpl" value="1662" />
-          <entry key="txt" value="91" />
+          <entry key="php" value="18310" />
+          <entry key="tpl" value="2097" />
+          <entry key="txt" value="115" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="112" />
-          <entry key="PHP" value="16144" />
-          <entry key="PLAIN_TEXT" value="91" />
-          <entry key="Smarty" value="1662" />
+          <entry key="PHP" value="18310" />
+          <entry key="PLAIN_TEXT" value="146" />
+          <entry key="Smarty" value="2066" />
           <entry key="htaccess" value="218" />
         </counts>
       </usages-collector>
@@ -129,65 +133,50 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/page/main.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="738">
-              <caret line="68" column="54" selection-start-line="68" selection-start-column="54" selection-end-line="68" selection-end-column="54" />
+            <state relative-caret-position="238">
+              <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1394">
-              <caret line="82" column="46" selection-start-line="82" selection-start-column="46" selection-end-line="82" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/page/config.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template/admin_duels.tpl">
+        <entry file="file://$PROJECT_DIR$/template/email_validate.tpl">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
-              <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+              <caret line="2" column="70" selection-start-line="2" selection-start-column="70" selection-end-line="2" selection-end-column="70" />
+              <folding>
+                <element signature="n#style#0;n#span#0;n#p#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/page/email.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="548">
+              <caret line="90" column="11" selection-start-line="90" selection-start-column="11" selection-end-line="90" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template/main.tpl">
+        <entry file="file://$PROJECT_DIR$/template/email_change.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="51">
+              <caret line="3" column="78" selection-start-line="3" selection-start-column="78" selection-end-line="3" selection-end-column="78" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template/window_duel.tpl">
+        <entry file="file://$PROJECT_DIR$/page/reg.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/page/duels_showlist.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="141" selection-start-line="16" selection-start-column="141" selection-end-line="16" selection-end-column="141" />
+            <state relative-caret-position="527">
+              <caret line="115" column="35" lean-forward="true" selection-start-line="104" selection-start-column="32" selection-end-line="115" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -227,7 +216,6 @@
         <option value="$PROJECT_DIR$/template/header.tpl" />
         <option value="$PROJECT_DIR$/page/duels.php" />
         <option value="$PROJECT_DIR$/template/reg.tpl" />
-        <option value="$PROJECT_DIR$/page/reg.php" />
         <option value="$PROJECT_DIR$/template/add_duel.tpl" />
         <option value="$PROJECT_DIR$/page/duels_showlist.php" />
         <option value="$PROJECT_DIR$/page/window_duel.php" />
@@ -240,9 +228,16 @@
         <option value="$PROJECT_DIR$/template/admin_duels_red.tpl" />
         <option value="$PROJECT_DIR$/page/admin.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/page/config.php" />
-        <option value="$PROJECT_DIR$/page/main.php" />
         <option value="$PROJECT_DIR$/template/main.tpl" />
+        <option value="$PROJECT_DIR$/page/config.php" />
+        <option value="$PROJECT_DIR$/page/PHPMailer.php" />
+        <option value="$PROJECT_DIR$/page/Exception.php" />
+        <option value="$PROJECT_DIR$/page/main.php" />
+        <option value="$PROJECT_DIR$/page/reg.php" />
+        <option value="$PROJECT_DIR$/template/email_validate_change.tpl" />
+        <option value="$PROJECT_DIR$/template/email_validate.tpl" />
+        <option value="$PROJECT_DIR$/template/email_change.tpl" />
+        <option value="$PROJECT_DIR$/page/email.php" />
       </list>
     </option>
   </component>
@@ -348,7 +343,9 @@
       <workItem from="1539522585881" duration="1800000" />
       <workItem from="1539546417754" duration="149000" />
       <workItem from="1539880458815" duration="2596000" />
-      <workItem from="1539970844675" duration="244000" />
+      <workItem from="1539970844675" duration="1634000" />
+      <workItem from="1540116752354" duration="232000" />
+      <workItem from="1540117037895" duration="7097000" />
     </task>
     <task id="LOCAL-00001" summary="test123">
       <created>1539460163940</created>
@@ -385,17 +382,31 @@
       <option name="project" value="LOCAL" />
       <updated>1539461690032</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="---">
+      <created>1539971103796</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1539971103796</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Create vereficated email">
+      <created>1540119963306</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1540119963306</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103725000" />
+    <option name="totallyTimeSpent" value="112444000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="916" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2377892" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24421594" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -449,7 +460,8 @@
     <MESSAGE value="Добавление переменнной $pidoras" />
     <MESSAGE value="Изменение пароля конфигурации" />
     <MESSAGE value="---" />
-    <option name="LAST_COMMIT_MESSAGE" value="---" />
+    <MESSAGE value="Create vereficated email" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create vereficated email" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/alax.html" />
@@ -518,13 +530,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/page/reg.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="1" selection-start-line="9" selection-end-line="17" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/error404.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -577,17 +582,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/page/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/template/admin_duels.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/main.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
@@ -605,17 +610,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/main.tpl">
+    <entry file="file://$PROJECT_DIR$/page/PHPMailer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="544">
+          <caret line="1066" column="52" lean-forward="true" selection-start-line="1066" selection-start-column="52" selection-end-line="1066" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/Exception.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="1" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
+          <folding>
+            <element signature="e#6#821#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/pidor.tpl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/email_validate_change.tpl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/email_validate.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="70" selection-start-line="2" selection-start-column="70" selection-end-line="2" selection-end-column="70" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#p#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/page/main.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="738">
-          <caret line="68" column="54" selection-start-line="68" selection-start-column="54" selection-end-line="68" selection-end-column="54" />
+        <state relative-caret-position="238">
+          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/email_change.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="78" selection-start-line="3" selection-start-column="78" selection-end-line="3" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/reg.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="115" column="35" lean-forward="true" selection-start-line="104" selection-start-column="32" selection-end-line="115" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/email.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="548">
+          <caret line="90" column="11" selection-start-line="90" selection-start-column="11" selection-end-line="90" selection-end-column="11" />
         </state>
       </provider>
     </entry>

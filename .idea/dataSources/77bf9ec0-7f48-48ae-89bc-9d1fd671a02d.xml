@@ -958,7 +958,6 @@
     <column id="238" parent="231" name="user_id2">
       <Position>6</Position>
       <DataType>int(10) unsigned|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="239" parent="231" name="win_balance">
@@ -1004,81 +1003,87 @@
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="246" parent="232" name="date_reg">
+    <column id="246" parent="232" name="email_validate">
       <Position>5</Position>
+      <DataType>varchar(32)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="247" parent="232" name="date_reg">
+      <Position>6</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="247" parent="232" name="balance">
-      <Position>6</Position>
+    <column id="248" parent="232" name="balance">
+      <Position>7</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="248" parent="232" name="cookie_session">
-      <Position>7</Position>
+    <column id="249" parent="232" name="cookie_session">
+      <Position>8</Position>
       <DataType>char(32)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="249" parent="232" name="cookie_time">
-      <Position>8</Position>
+    <column id="250" parent="232" name="cookie_time">
+      <Position>9</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="250" parent="232" name="duel_nick">
-      <Position>9</Position>
+    <column id="251" parent="232" name="duel_nick">
+      <Position>10</Position>
       <DataType>varchar(32)|0s</DataType>
       <DefaultExpression>&apos;nope&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="251" parent="232" name="duel_online">
-      <Position>10</Position>
+    <column id="252" parent="232" name="duel_online">
+      <Position>11</Position>
       <DataType>int(3) unsigned|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="252" parent="232" name="login">
+    <index id="253" parent="232" name="login">
       <ColNames>login</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="253" parent="232" name="email">
+    <index id="254" parent="232" name="email">
       <ColNames>email</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="254" parent="232" name="cookie_session">
+    <index id="255" parent="232" name="cookie_session">
       <ColNames>cookie_session</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="255" parent="232" name="duel_nick">
+    <index id="256" parent="232" name="duel_nick">
       <ColNames>duel_nick</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="256" parent="232" name="PRIMARY">
+    <key id="257" parent="232" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="257" parent="232" name="login">
+    <key id="258" parent="232" name="login">
       <ColNames>login</ColNames>
       <UnderlyingIndexName>login</UnderlyingIndexName>
     </key>
-    <key id="258" parent="232" name="email">
+    <key id="259" parent="232" name="email">
       <ColNames>email</ColNames>
       <UnderlyingIndexName>email</UnderlyingIndexName>
     </key>
-    <key id="259" parent="232" name="cookie_session">
+    <key id="260" parent="232" name="cookie_session">
       <ColNames>cookie_session</ColNames>
       <UnderlyingIndexName>cookie_session</UnderlyingIndexName>
     </key>
-    <key id="260" parent="232" name="duel_nick">
+    <key id="261" parent="232" name="duel_nick">
       <ColNames>duel_nick</ColNames>
       <UnderlyingIndexName>duel_nick</UnderlyingIndexName>
     </key>
