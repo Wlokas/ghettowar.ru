@@ -1,5 +1,7 @@
 <?php
 require_once 'config.php';
+require_once 'PHPMailer.php';
+use PHPMailer\PHPMailer\PHPMailer;
 //require_once 'no_cache.php';
 try {
     $pdo = new pdo('mysql:host='.$config['mysql_host'].';dbname='.$config['mysql_datebase'], $config['mysql_user'], $config['mysql_password']);
@@ -8,7 +10,7 @@ try {
     exit();
 }
 function generateCode($length=6) {
-    $chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHI JKLMNOPRQSTUVWXYZ0123456789";
+    $chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPRQSTUVWXYZ0123456789";
     $code = "";
     $clen = strlen($chars) - 1;
     while (strlen($code) < $length) {
@@ -16,6 +18,7 @@ function generateCode($length=6) {
     }
     return $code;
 }
+$mail = new PHPMailer(false);                              // Passing `true` enables exceptions
 $message = '';
 $vlogin = '';
 $vemail = '';
@@ -66,7 +69,6 @@ if(isset($_COOKIE['session']))
         }
     }    else $message = 'Введены не все поля';
 }*/
-
 if(isset($_POST['submit']))
 {
     if(!empty($_POST['login']) && !empty($_POST['email']) && !empty($_POST['password']))
@@ -93,11 +95,23 @@ if(isset($_POST['submit']))
                         {
                            //----------Блок регистрации----------
                             $hash = generateCode(32);
+                            $email_validate = generateCode(32);
                             $data = time();
                             $cookie_time = (time() + 3600 * 24);
-                            $stmt = $pdo->prepare("INSERT INTO `ghettowar_users` (login, pass, email, date_reg, balance, cookie_session, cookie_time, duel_nick, duel_online) VALUES (:login, :pass, :email, :datareg, 0, :cookie, :cookietime, NULL, NULL)");
-                            $stmt->execute([':login' => $login, ':pass' => $password, ':email' => $email, ':datareg' => $data, 'cookie' => $hash, 'cookietime' => $cookie_time]);
+                            $stmt = $pdo->prepare("INSERT INTO `ghettowar_users` (login, pass, email, email_validate, date_reg, balance, cookie_session, cookie_time, duel_nick, duel_online) VALUES (:login, :pass, :email, :email_validate, :datareg, 0, :cookie, :cookietime, NULL, NULL)");
+                            $stmt->execute([':login' => $login, ':pass' => $password, ':email' => $email, 'email_validate' => $email_validate, ':datareg' => $data, 'cookie' => $hash, 'cookietime' => $cookie_time]);
                             setcookie("session", $hash, $cookie_time, "/");
+                                //Recipients
+                                $mail->setFrom('admin@ghettowar.ru', 'Administrator');
+                                $mail->addAddress($email, $login);     // Add a recipient
+                                $mail->addReplyTo('info@@ghettowar.ru', 'Information');
+
+                                //Content
+                                $mail->isHTML(true);                                  // Set email format to HTML
+                                $mail->Subject = 'Подтверждение Email';
+                                $mail->Body    = 'Подтверждение Email пользователя: '.$login.'<br>Для этого перейдите по ссылке: <a href="'.$_SERVER['HTTP_HOST'].'/page/main.php'.'?evalidate='.$email_validate.'">Подтвердить</a>';
+                                $mail->AltBody = 'Подтверждение Email пользователя: '.$login.' Для этого перейдите по ссылке: '.$_SERVER['HTTP_HOST'].'/page/main.php'.'?evalidate='.$email_validate;
+                                $mail->send();
                             header('Location: main.php');
                             exit();
                             //-----------------------------------

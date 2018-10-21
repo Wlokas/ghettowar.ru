@@ -55,6 +55,22 @@ if(isset($_COOKIE['session']))
     }
     else setcookie("session","0",time()-1, "/");
 }
+if(isset($_GET['evalidate']) && !empty($_GET['evalidate']))
+{
+    $email_validate = $_GET['evalidate'];
+    if($account['email_validate'] == $email_validate)
+    {
+        $stmt = $pdo->prepare("UPDATE `ghettowar_users` SET `email_validate`=:email_validate WHERE `id`=:id LIMIT 1");
+        $stmt->execute([':email_validate' => '1', ':id' => $account['id']]);
+    }
+}
+elseif(isset($_COOKIE['session']) && $account['email_validate'] != '1')
+{
+    $template = str_replace(['{%title%}'],['Подтверждение Email'],file_get_contents('../template/header.tpl')).
+        str_replace(['{%EMAIL%}'], [$account['email']], file_get_contents('../template/email_validate.tpl')).
+        file_get_contents('../template/footer.tpl');
+    exit($template);
+}
 //-------------------------------------Дуель------------------------------------------
 if(isset($_POST['duelinfo']))
 {
