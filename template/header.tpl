@@ -10,4 +10,9 @@
     <title>{%title%}</title>
 </head>
 <body>
+<!-- Удалить -->
+<nav>
+    <p style="color: gray;">[Тестовая версия]</p>
+</nav>
+<!-- ------ -->
 <!--end-->

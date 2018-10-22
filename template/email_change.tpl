@@ -4,3 +4,4 @@
     <label for="email">Email:</label><input type="text" id="email" name="email" placeholder="Email..">
     <button>Изменить</button>
 </form>
+<a href="/">Назад..</a>
