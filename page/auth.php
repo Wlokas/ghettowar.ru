@@ -69,6 +69,7 @@ if(isset($_POST['submit']))
                         //-----------Блок Авторизации-----------
                         $cookie = generateCode(32);
                         $cookietime = time() + 3600 * 24;
+                        if(isset($_POST['remember'])) { $cookietime = time() + 3600 * (24 * 7); }
                         $stmt = $pdo->prepare("UPDATE `ghettowar_users` SET `cookie_session`=:cookiesession, `cookie_time`=:cookietime WHERE `login`=:login AND `pass`=:pass LIMIT 1");
                         $stmt->execute([':cookiesession' => $cookie, ':cookietime' => $cookietime, ':login' => $login, ':pass' => $password]);
                         setcookie("session", $cookie, $cookietime, "/");

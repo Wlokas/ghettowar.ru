@@ -67,7 +67,7 @@ if(isset($_GET['evalidate']) && !empty($_GET['evalidate']))
 elseif(isset($_COOKIE['session']) && $account['email_validate'] != '1')
 {
     $template = str_replace(['{%title%}'],['Подтверждение Email'],file_get_contents('../template/header.tpl')).
-        str_replace(['{%EMAIL%}'], [$account['email']], file_get_contents('../template/email_validate.tpl')).
+        str_replace(['{%EMAIL%}', '{%PHP_SELF%}'], [$account['email'], $_SERVER['PHP_SELF']], file_get_contents('../template/email_validate.tpl')).
         file_get_contents('../template/footer.tpl');
     exit($template);
 }
