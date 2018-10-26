@@ -7,5 +7,6 @@
         <p><label for="remember">Запомнить меня</label><input id="remember" type="checkbox" name="remember" value="yes"></p>
         <button name="submit">Войти</button>
     </form>
+    <p>Нет аккаунта? <a href="/page/reg.php">Зарегистрироваться!</a></p>
 </div>
 <!--end-->

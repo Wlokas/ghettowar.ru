@@ -7,5 +7,6 @@
         <input type="password" name="password" placeholder="password"><br>
         <input type="submit" name="submit" value="Зарегистрироваться">
     </form>
+    <p>Уже есть аккаунт? <a href="/page/auth.php">Авторизоваться!</a></p>
 </div>
 <!--end-->
